@@ -134,7 +134,7 @@ const createMainWindow = () => {
     webPreferences: {
       webSecurity: false,
       allowRunningInsecureContent: false,
-      nodeIntegration: true,
+      nodeIntegration: !!process.env.ELECTRON_NODE_INTEGRATION,
     },
   })
 
